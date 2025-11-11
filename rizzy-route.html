@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizzy Route 💋</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/rizzy.css">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <h2>Loading maximum rizz...</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Rizz levels: <span id="rizz-level">0%</span></p>
+        </div>
+    </div>
+
+    <div id="main-content" class="main-content hidden">
+        <div class="stars"></div>
+        
+        <div class="quiz-container">
+            <div class="question-container active" data-question="1">
+                <h3 class="question-text">Buldak Question</h3>
+                <p class="question-description">"If we were eating Buldak together, I'd…"</p>
+                <div class="answers">
+                    <button class="answer-btn" data-answer="A">
+                        <span class="answer-label">A)</span>
+                        <span class="answer-text">Steal the last bite 🔥</span>
+                    </button>
+                    <button class="answer-btn" data-answer="B">
+                        <span class="answer-label">B)</span>
+                        <span class="answer-text">Feed you my favorite one 😏</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="question-container" data-question="2">
+                <div class="batman-question-wrapper">
+                    <div class="batman-question-content">
+                        <h3 class="question-text">Batman Scenario</h3>
+                        <p class="question-description">"I'm Batman, about to save the city 'cause the night don't rest. You lock eyes with me — tension's high. What you doing?"</p>
+                        <div class="answers">
+                            <button class="answer-btn" data-answer="A">
+                                <span class="answer-label">A)</span>
+                                <span class="answer-text">Go be a hero the city need you</span>
+                            </button>
+                            <button class="answer-btn" data-answer="B">
+                                <span class="answer-label">B)</span>
+                                <span class="answer-text">Dress up as Catwoman and captivate Batman</span>
+                            </button>
+                            <button class="answer-btn" data-answer="C">
+                                <span class="answer-label">C)</span>
+                                <span class="answer-text">Save the city together</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="batman-image-container">
+                        <img src="pics/batman.jpg" alt="Batman" class="batman-image">
+                        <img src="pics/batcouple.jpg" alt="Bat Couple" class="batman-image batcouple-image">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question-container" data-question="3">
+                <h3 class="question-text">Flirty Scenario Question</h3>
+                <p class="question-description">"If I surprise you right now, you'd want…"</p>
+                <div class="answers">
+                    <button class="answer-btn" data-answer="A">
+                        <span class="answer-label">A)</span>
+                        <span class="answer-text">A kiss 😘</span>
+                    </button>
+                    <button class="answer-btn" data-answer="B">
+                        <span class="answer-label">B)</span>
+                        <span class="answer-text">A cuddle 🤗</span>
+                    </button>
+                    <button class="answer-btn" data-answer="C">
+                        <span class="answer-label">C)</span>
+                        <span class="answer-text">Both</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="question-container" data-question="4">
+                <h3 class="question-text">Carti Question</h3>
+                <p class="question-description">"What is the best Carti song:"</p>
+                <div class="answers">
+                    <button class="answer-btn" data-answer="A">
+                        <span class="answer-label">A)</span>
+                        <span class="answer-text">Not Playing</span>
+                    </button>
+                    <button class="answer-btn" data-answer="B">
+                        <span class="answer-label">B)</span>
+                        <span class="answer-text">Olympian</span>
+                    </button>
+                    <button class="answer-btn" data-answer="C">
+                        <span class="answer-label">C)</span>
+                        <span class="answer-text">IloveyouIhateu</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="response-message hidden" id="response-message"></div>
+        </div>
+
+
+        <div class="quiz-results hidden" id="quiz-results">
+            <div class="results-content">
+                <h1 class="results-title">GOOD JOB YOU GOT 100% IN THE RIZZ QUIZ 😱🔥💯</h1>
+                <p class="results-funny-text">NO WAYYYY YOU ACTUALLY DID IT 😱🔥💯</p>
+                <p class="results-funny-text-2">yn vaib is proud</p>
+                <div class="results-image-container">
+                    <img src="pics/yn.JPG" alt="YN" class="results-image">
+                </div>
+                <div class="results-sparkles">✨🎉🎊🎈🎁💖🎉✨</div>
+                <p class="results-celebration">CONGRATULATIONS QUEENRUSHI! 🏆👑</p>
+                <button class="continue-to-presentation-btn" id="continue-to-presentation">Continue to Presentation →</button>
+            </div>
+        </div>
+
+        <div class="ending-message hidden" id="ending-message">
+            <h2>You survived the Rizz Route 💋</h2>
+            <p>Reward unlocked: One Virtual Kiss 💞</p>
+            <button class="achievement-btn" id="show-achievement">Claim Achievement</button>
+        </div>
+
+        <div class="achievement-screen hidden" id="achievement-screen">
+            <div class="achievement-content">
+                <h2>🏆 Achievement Unlocked! 🏆</h2>
+                <div class="badges">
+                    <div class="badge">
+                        <div class="badge-icon">💋</div>
+                        <p>Certified Rizz Champion</p>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon">❤️</div>
+                        <p>Master of Vaibhav's Heart</p>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon">🔥</div>
+                        <p>Rizz Level: MAXIMUM</p>
+                    </div>
+                </div>
+                <a href="index.html" class="home-btn">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="confetti-canvas"></canvas>
+    
+    <script src="scripts/audio.js"></script>
+    <script src="scripts/confetti.js"></script>
+    <script src="scripts/rizzy.js"></script>
+</body>
+</html>
+
