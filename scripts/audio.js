@@ -52,7 +52,8 @@ class AudioManager {
         for (const [name, path] of Object.entries(musicFiles)) {
             try {
                 const audio = new Audio(path);
-                audio.loop = true;
+                // Only loop presentation music, not rizzy or romantic
+                audio.loop = (name === 'presentation');
                 audio.volume = 0.3; // 30% volume for background music
                 audio.addEventListener('error', () => {
                     console.log(`Music file not found: ${path}`);
